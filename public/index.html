@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <title>Draw Game</title>
+</head>
+<body>
+<h1 id="ping">TEST</h1>
+<canvas id="canvas" width="800" height="800" style="border:1px solid #000000;"></canvas>
+<div class="tools">
+    <div class="colors">
+        <div id="red" class="color red"></div>
+        <div id="green" class="color green"></div>
+        <div id="blue" class="color blue"></div>
+        <div id="yellow" class="color yellow"></div>
+        <div id="orange" class="color orange"></div>
+        <div id="black" class="color black"></div>
+    </div>
+    <div id="eraser" class="color eraser"></div>
+    <input id="width-slider" class="slider" type="range" min="1" max="10" value="3">
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"></script>
+
+</body>

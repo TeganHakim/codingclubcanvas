@@ -1,0 +1,41 @@
+.tools {
+  width: 10vw;
+  height: 40vh;
+  border: 1px solid black;
+  position: absolute;
+  right: 25%;
+  top: 30%;
+}
+.color {
+  width: 20px;
+  height: 20px;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.orange {
+  background-color: orange;
+}
+.black {
+  background-color: black;
+}
+.eraser {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.color-selected {
+  width: 40px;
+  height: 40px;
+}
