@@ -1,23 +1,78 @@
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <title>Draw Game</title>
 </head>
 <body>
-<h1 id="ping">TEST</h1>
-<canvas id="canvas" width="800" height="800" style="border:1px solid #000000;"></canvas>
-<div class="tools">
-    <div class="colors">
-        <div id="red" class="color red"></div>
-        <div id="green" class="color green"></div>
-        <div id="blue" class="color blue"></div>
-        <div id="yellow" class="color yellow"></div>
-        <div id="orange" class="color orange"></div>
-        <div id="black" class="color black"></div>
+    <header>
+        <h1 class="title">Coding Club Canvas</h1>
+        <div class="run-tools">
+            <h1 class="ping" id="ping">Ping: 0 ms</h1>
+            <h1 class="fps" id="fps">Fps: 60</h1>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="tools">
+            <div class="colors">
+                <h2>Color</h2>
+                <div class="current-color"></div>
+                <input class="rgb-code" id="rgb-code" type="text" name="rgb-code" id="rgb-code" value="rgb(0,0,0)">
+                <div class="color-table">
+                    <div id="rgb(0,0,0)" class="color black-1"></div>
+                    <div id="rgb(255,0,0)" class="color red-1"></div>
+                    <div id="rgb(0,255,0)" class="color green-1"></div>
+                    <div id="rgb(0,0,255)" class="color blue-1"></div>
+                    <div id="rgb(255,255,0)" class="color yellow-1"></div>
+                    <div id="rgb(255,165,0)" class="color orange-1"></div>
+                    <div id="rgb(74,74,74)" class="color black-2"></div>
+                    <div id="rgb(200,0,0)" class="color red-2"></div>
+                    <div id="rgb(0,200,0)" class="color green-2"></div>
+                    <div id="rgb(0,0,200)" class="color blue-2"></div>
+                    <div id="rgb(200,200,0)" class="color yellow-2"></div>
+                    <div id="rgb(200,134,0)" class="color orange-2"></div>
+                    <div id="rgb(115,115,115)" class="color black-3"></div>
+                    <div id="rgb(150,0,0)" class="color red-3"></div>
+                    <div id="rgb(0,150,0)" class="color green-3"></div>
+                    <div id="rgb(0,0,150)" class="color blue-3"></div>
+                    <div id="rgb(150,150,0)" class="color yellow-3"></div>
+                    <div id="rgb(150,100,0)" class="color orange-3"></div>
+                    <div id="rgb(160,160,160)" class="color black-4"></div>
+                    <div id="rgb(100,0,0)" class="color red-4"></div>
+                    <div id="rgb(0,100,0)" class="color green-4"></div>
+                    <div id="rgb(0,0,100)" class="color blue-4"></div>
+                    <div id="rgb(100,100,0)" class="color yellow-4"></div>
+                    <div id="rgb(100,66,0)" class="color orange-4"></div>                    
+                </div>
+            </div>
+            <h2>Tools</h2>
+            <div id="tool-table" class="tool-table">
+                <i id="eraser" class="tool-item fas fa-eraser"></i>
+                <i id="brush" class="tool-item fas fa-paint-brush tool-selected"></i>
+            </div>
+            <h2>Size</h2>
+            <div class="size-table">
+                <div class="small"></div>
+                <div class="small-medium"></div>
+                <div class="medium"></div>
+                <div class="large"></div>
+            </div>
+            <input id="width-slider" class="slider" type="range" min="1" max="20" value="4">
+            <h2>Texture</h2>
+            <div class="texture-table">
+                <img id="brush" class="texture texture-selected" src="/Img/brush.JPG" alt="Normal Brush">
+                <img id="shadow" class="texture" src="/Img/shadow.JPG" alt="Shadow Brush">
+                <img id="spray" class="texture" src="/Img/spray.JPG" alt="Spray Brush">
+            </div>
+            <button class="download" onclick="DownloadCanvasImage()">Download</button>
+        </div> 
+        <canvas class="canvas" id="canvas"></canvas>
     </div>
-    <div id="eraser" class="color eraser"></div>
-    <input id="width-slider" class="slider" type="range" min="1" max="10" value="3">
-</div>
-<script src="/socket.io/socket.io.js"></script>
-<script src="/index.js"></script>
 
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/index.js"></script>
 </body>
+</html>

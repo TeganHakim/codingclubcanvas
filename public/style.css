@@ -1,41 +1,290 @@
+/* Colors and variables */
+:root {
+  --bg: rgb(200, 240, 255);
+  --current-color: rgb(0, 0, 0);
+}
+/* Remove default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+/* Header */
+header {
+  height: 10vh;
+  width: 100vw;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+}
+header .title {
+  font-size: 40px;
+  font-weight: 200;
+}
+header .run-tools{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+header .run-tools h1 {
+  font-size: 16px;
+  font-weight: 200;
+}
+/* Main Content */
+.main-content {
+  width: 100vw;
+  height: 90vh;
+} 
+/* Tool Menu */
 .tools {
   width: 10vw;
-  height: 40vh;
-  border: 1px solid black;
-  position: absolute;
-  right: 25%;
-  top: 30%;
+  height: 90vh;
+  border-right: 1px solid black;
+  margin: 0;
+  float: left;
+  text-align: center;
+}
+.tools h2 {
+  padding-bottom: 10px;
+}
+.colors {
+  text-align: center;
+  padding-top: 10px;
+  position: relative;
+}
+.colors .current-color {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 50%;
+  height: 11%;
+  background-color: var(--current-color);
+  border: 2px solid black;
+  caret-color: transparent;
+}
+.colors .rgb-code {
+  width: 85%;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+.color-table {
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  margin-bottom: 20px;
 }
 .color {
+  margin-left:auto;
+  margin-right:auto;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  caret-color: transparent;
+}
+/* 1st Row */
+.black-1 {
+  background-color: rgb(0,0,0);
+}
+.red-1 {
+  background-color: rgb(255,0,0);
+}
+.green-1 {
+  background-color: rgb(0,255,0);
+}
+.blue-1 {
+  background-color: rgb(0,0,255);
+}
+.yellow-1 {
+  background-color: rgb(255,255,0);
+}
+.orange-1 {
+  background-color: rgb(255,165,0);
+}
+/* 2nd Row */
+.black-2 {
+  background-color: rgb(74,74,74);
+}
+.red-2 {
+  background-color: rgb(200,0,0);
+}
+.green-2 {
+  background-color: rgb(0,200,0);
+}
+.blue-2 {
+  background-color: rgb(0,0,200);
+}
+.yellow-2 {
+  background-color: rgb(200,200,0);
+}
+.orange-2 {
+  background-color: rgb(200,134,0);
+}
+/* 3rd Row */
+.black-3 {
+  background-color: rgb(115,115,115);
+}
+.red-3 {
+  background-color: rgb(150,0,0);
+}
+.green-3 {
+  background-color: rgb(0,150,0);
+}
+.blue-3 {
+  background-color: rgb(0,0,150);
+}
+.yellow-3 {
+  background-color: rgb(150,150,0);
+}
+.orange-3 {
+  background-color: rgb(150,100,0);
+}
+/* 4th Row */
+.black-4 {
+  background-color: rgb(160,160,160);
+}
+.red-4 {
+  background-color: rgb(100,0,0);
+}
+.green-4 {
+  background-color: rgb(0,100,0);
+}
+.blue-4 {
+  background-color: rgb(0,0,100);
+}
+.yellow-4 {
+  background-color: rgb(100,100,0);
+}
+.orange-4 {
+  background-color: rgb(100,66,0);
+}
+/* Tools */
+.tool-table {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+.tool-table .tool-item {
+  font-size: 40px;
+  cursor: pointer;
+  caret-color: transparent;
+}
+.tool-table .fa-eraser{
+  color: rgb(255, 109, 133);
+}
+.tool-table .fa-paint-brush{
+  color: rgb(119, 58, 0);
+}
+/* Size Slider*/
+.size-table {
+  position: relative;
+  width: 90%;
+  height: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.size-table div {
+  background-color: var(--current-color);
+  border: 1px solid black;
+  border-radius: 50%;
+  caret-color: transparent;
+}
+.size-table .small {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  left: 8%;
+  bottom: 0px;
+}
+.size-table .small-medium {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 35%;
+  bottom: 0px;
+}
+.size-table .medium {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 30%;
+  bottom: 0px;
+}
+.size-table .large {
   width: 20px;
   height: 20px;
+  position: absolute;
+  right: -5%;
+  bottom: 0px;
 }
-.red {
-  background-color: red;
+.slider {
+  width: 90%;
+  caret-color: transparent;
+  margin-bottom: 10%;
 }
-.green {
-  background-color: green;
+/* Textures */
+.texture-table {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 3%;
+  margin-bottom: 5%;
 }
-.blue {
-  background-color: blue;
-}
-.yellow {
-  background-color: yellow;
-}
-.orange {
-  background-color: orange;
-}
-.black {
-  background-color: black;
-}
-.eraser {
-  width: 18px;
-  height: 18px;
-  background-color: white;
-  border: 1px solid black;
-}
-
-.color-selected {
+.texture-table img {
+  cursor: pointer;
   width: 40px;
   height: 40px;
+}
+/* Save Button */
+button.download {
+  width: 60%;
+  height: 30px;
+  font-size: 100%;
+  font-weight: 300;
+  background-color: white;
+  color: black;
+  border: 1px solid rgb(0, 0 ,0);
+  border-radius: 15px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.7);
+  transition: background-color 0.5s ease-in, color 0.6s ease, border 0.5s ease-in-out;
+  caret-color: transparent;
+}
+button.download:hover {
+  transform: scale(1.15);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid white;
+}
+/* Canvas */
+canvas {
+  background-color: white;
+  margin: 0;
+  float: right;
+} 
+
+/* Helper Class */
+.color-selected {
+  border: 2px solid black;
+}
+.tool-selected {
+  font-size: 50px!important;
+}
+.texture-selected {
+  transform: scale(1.2);
 }
